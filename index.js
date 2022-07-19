@@ -28,31 +28,32 @@ const questions = [
         type: 'input',
         message: 'List your collaborators, if any, with links to their GitHub profiles.',
         name: 'credits'
+    },
+    {
+        type: 'input',
+        message: 'Provide the link to the project from GitHub.',
+        name: 'github'
     }
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(data) {
     return `
-    # ${data.title}
+# ${data.title}
 
-    ## Description
-    ${data.description}
+## Description
+${data.description}
 
-    ## Installation
-    ${data.installation}
+## Installation
+${data.installation}
     
-    ## Usage
-    ${data.usage}
+## Usage
+${data.usage}
 
-    ## Credits
-    ${data.credits}
+## Credits
+${data.credits}
 
-    ## License
-    ## Badges
-    ## Features
-    ## How to Contribute
-    ## Tests
+<a href="${data.github}">Project on GitHub.</a>
     `
 }
 
